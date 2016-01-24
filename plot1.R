@@ -4,7 +4,7 @@ dane[,1] = paste(dane$Date, dane$Time, sep = " ")
 dane$Date <- as.POSIXct(strptime(dane[,1], "%d/%m/%Y %H:%M:%S"))
 
 png('plot1.png', width = 480, height = 480)
-
+par(bg = NA)
 hist(dane$Global_active_power, main = "Global active power", 
      xlab = "Global Active Power (kilowatts)", ylab = "Frequency", col = "red")
 
